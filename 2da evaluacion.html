@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras de Control </title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; margin: 20px; }
+        h1 { color: #000000; }
+        h2 { color: #000000; border-bottom: 2px  }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        .definition { font-style: arial; margin-bottom: 10px; }
+        .example-note { color: rgb(0, 0, 0); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Estructuras de Control-ELEMENTOS</h1>
+    <p>Las estructuras de control son sentencias que deciden la ejecución del código. Nos permiten tomar decisiones (condicionales) y repetir tareas (bucles).</p>
+
+    
+
+    <h2>1.  Bucle while (Mientras)</h2>
+    <p class="definition">El bucle **`while`** ejecuta un bloque de código mientras una condición específica sea verdadera. La condición se comprueba *antes* de cada repetición.</p>
+    
+
+
+
+    <h3>Ejemplo (JavaScript):</h3>
+    <p class="example-note"></p>
+    <pre>
+let contadorWhile = 0;
+while (contadorWhile < 3) {
+    console.log("While: El contador es: " + contadorWhile);
+    contadorWhile++; // Incremento para avanzar
+} 
+    </pre>
+
+    
+
+    <h2>2.  Bucle do...while (Hacer...Mientras)</h2>
+    <p class="definition">El bucle **`do...while`** ejecuta el bloque de código al menos una vez, ya que la condición se verifica después de la primera ejecución. Luego, repite mientras la condición siga siendo verdadera.</p>
+
+
+
+
+
+    <h3>Ejemplo (JavaScript):</h3>
+    <pre>
+let i = 5;
+do {
+    console.log("Do...While: Ejecutado una vez, aunque i sea " + i); 
+    i++;
+} while (i < 3); // La condición es falsa, pero se ejecutó primero el 'do'
+    </pre>
+
+    
+
+    <h2>3.  Condicional if...else y if...else if...else</h2>
+    <p class="definition">Estas estructuras permiten ejecutar código de manera **condicional**. Si la primera condición (`if`) es falsa, pasa a la siguiente (`else if`), y si todas son falsas, ejecuta el bloque **`else`** (el caso por defecto).</p>
+    
+
+
+
+
+    <h3>Ejemplo (JavaScript):</h3>
+    <pre>
+let puntaje = 85;
+
+if (puntaje >= 90) {
+    console.log("If/Else: Calificación: A (Excelente)");
+} else if (puntaje >= 80) { // Si no es >= 90, ¿es >= 80?
+    console.log("If/Else: Calificación: B (Notable)");
+} else { // Si no es ni A ni B
+    console.log("If/Else: Calificación: C (Aprobado)");
+}
+    </pre>
+
+    
+
+    <h2>4.  Bucle for (Para)</h2>
+    <p class="definition">El bucle **`for`** se usa cuando se conoce de antemano el número exacto de repeticiones. Controla un contador desde un inicio, hasta una condición final, con un paso de incremento/decremento.</p>
+
+
+
+
+
+    <h3>Ejemplo (JavaScript):</h3>
+    <pre>
+// (Inicio; Condición de fin; Paso)
+for (let j = 0; j < 4; j++) {
+    console.log("For: Iteración número: " + j);
+}
+    </pre>
+
+    
+
+    <h2>5.  Bucle forEach (Para Cada Elemento)</h2>
+    <p class="definition">El concepto **`forEach`** (implementado en JS con `for...of` o métodos de Array) sirve para iterar fácilmente sobre cada **elemento** de una colección (como una lista o *array*) sin manipular los índices manualmente.</p>
+
+
+
+
+
+    <h3>Ejemplo (JavaScript - Usando `for...of`):</h3>
+    <pre>
+const colores = ["Rojo", "Verde", "Azul"];
+
+for (const color of colores) {
+    console.log("For Each: El color es " + color);
+}
+    </pre>
+
+    
+
+    <h2>6.  Condicional select case (o `switch`)</h2>
+    <p class="definition">La estructura **`switch`** (o `Select Case` en otros lenguajes) permite comparar una variable contra una serie de posibles valores (`case`). Es más limpio que usar muchos `if...else if` para la misma variable.</p>
+
+
+
+
+
+    <h3>Ejemplo (JavaScript - Usando `switch`):</h3>
+    <pre>
+let opcion = "Abrir";
+let mensaje;
+
+switch (opcion) {
+    case "Abrir":
+        mensaje = "Se ha abierto el archivo.";
+        break;
+    case "Guardar":
+        mensaje = "Se ha guardado el archivo.";
+        break;
+    default:
+        mensaje = "Acción no reconocida.";
+}
+
+console.log("Switch: " + mensaje);
+    </pre>
+
+   
+
+    
+</body>
+</html>
