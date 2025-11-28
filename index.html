@@ -140,64 +140,6 @@ switch (opcion) {
 console.log("Switch: " + mensaje);
     </pre>
 
-    <script>
-        // Este bloque de script ejecuta los ejemplos al cargar la página
-        // Puedes ver los resultados en la Consola (F12)
-
-        // 1. While
-        let contadorWhile = 0;
-        while (contadorWhile < 3) {
-            console.log("While: El contador es: " + contadorWhile);
-            contadorWhile++;
-        }
-
-        // 2. Do...While
-        let i = 5;
-        do {
-            console.log("Do...While: Ejecutado una vez, aunque i sea " + i); 
-            i++;
-        } while (i < 3);
-
-        // 3. If/Else
-        let puntaje = 85;
-
-        if (puntaje >= 90) {
-            console.log("If/Else: Calificación: A (Excelente)");
-        } else if (puntaje >= 80) { 
-            console.log("If/Else: Calificación: B (Notable)");
-        } else { 
-            console.log("If/Else: Calificación: C (Aprobado)");
-        }
-
-        // 4. For
-        for (let j = 0; j < 4; j++) {
-            console.log("For: Iteración número: " + j);
-        }
-        
-        // 5. For Each (For...of)
-        const colores = ["Rojo", "Verde", "Azul"];
-
-        for (const color of colores) {
-            console.log("For Each: El color es " + color);
-        }
-
-        // 6. Switch
-        let opcion = "Abrir";
-        let mensaje;
-
-        switch (opcion) {
-            case "Abrir":
-                mensaje = "Se ha abierto el archivo.";
-                break;
-            case "Guardar":
-                mensaje = "Se ha guardado el archivo.";
-                break;
-            default:
-                mensaje = "Acción no reconocida.";
-        }
-
-        console.log("Switch: " + mensaje);
-
-    </script>
+   
 </body>
 </html>
